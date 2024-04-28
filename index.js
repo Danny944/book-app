@@ -1,16 +1,16 @@
 const http = require("http");
 const fs = require("fs");
 const path = require("path");
-// const dotenv = require("dotenv");
+const dotenv = require("dotenv");
 
-// dotenv.config();
+dotenv.config();
 const booksDbPath = path.join(__dirname, "db", "books.json");
 const usersDbPath = path.join(__dirname, "db", "users.json");
 
 let booksDB = [];
 let usersDB = [];
 
-const PORT = 8080;
+const PORT = process.env.PORT || 3000;
 const HOST_NAME = "localhost";
 
 const requestHandler = async (req, res) => {
