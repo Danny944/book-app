@@ -11,7 +11,7 @@ let booksDB = [];
 let usersDB = [];
 
 const PORT = process.env.PORT || 3000;
-const HOST_NAME = "localhost";
+const HOST_NAME = "0.0.0.0";
 
 const requestHandler = async (req, res) => {
   res.setHeader("Content-Type", "application/json");
